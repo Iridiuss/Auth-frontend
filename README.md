@@ -1,37 +1,29 @@
-//changed readme!
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Authentication System with Next.js, Tailwind CSS, and 2FA
 
-## Getting Started
+This is the frontend for an authentication system built with **Next.js** and **Tailwind CSS**. It integrates multiple OAuth authentication providers, including **Google**, **GitHub**, **Twitter**, **Facebook**, and **LinkedIn**. The system also supports **2FA** (Two-Factor Authentication) during signup, and displays the authenticated user's **name** and **email** on the profile page.
 
-First, run the development server:
+## Features
+- **Sign in with multiple providers**: Google, GitHub, Twitter, Facebook, LinkedIn.
+- **2FA for signup**: Secure account creation with two-factor authentication.
+- **User profile page**: After successful login, displays user information (name, email) on the profile page.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
+- **Next.js**: A React framework for building server-rendered applications.
+- **Tailwind CSS**: A utility-first CSS framework for building responsive and modern UIs.
+- **OAuth 2.0**: Integration with Google, GitHub, Twitter, Facebook, and LinkedIn OAuth APIs.
+- **2FA**: Two-factor authentication for enhanced signup security.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Prerequisites
+- **Node.js** (v14.x or higher)
+- **npm** (Node Package Manager)
+- A backend API that supports OAuth authentication and 2FA. Ensure that the backend is running and accessible.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Installation
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/authentication-system.git
+   cd authentication-system
+2. Run the project:
+    npm run dev
