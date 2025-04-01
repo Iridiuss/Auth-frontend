@@ -1,6 +1,7 @@
 // pages/profile.tsx
 "use client";
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 interface User {
   displayName: string;
@@ -10,6 +11,7 @@ interface User {
   twitterId?: string;
   linkedinId?: string;
   facebookId?: string;
+  profilePhoto?: string;
 }
 
 export default function Profile() {
@@ -36,11 +38,24 @@ export default function Profile() {
           <div className="text-center">
             {/* Profile Avatar */}
             <div className="inline-block h-24 w-24 rounded-full bg-gray-200 ring-4 ring-white mb-4">
-              <div className="flex h-full items-center justify-center">
-                <svg className="h-12 w-12 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
-                </svg>
-              </div>
+              {user?.profilePhoto ? (
+                <div className="relative h-24 w-24">
+                  <Image
+                    src={user.profilePhoto}
+                    alt={`${user.displayName}'s profile picture`}
+                    fill
+                    sizes="96px"
+                    className="rounded-full object-cover"
+                    priority
+                  />
+                </div>
+              ) : (
+                <div className="flex h-full items-center justify-center">
+                  <svg className="h-12 w-12 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
+                  </svg>
+                </div>
+              )}
             </div>
 
             {/* User Info */}
